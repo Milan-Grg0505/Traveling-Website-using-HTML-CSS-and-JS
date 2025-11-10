@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website</title>
+  
+  <!-- ======== cdn link of remix icon ============ -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  
+  <!-- ======== cdn link of swiper js ============ -->
+  
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+
+
+  <!-- ======== link with css ============ -->
+  <link rel="stylesheet" href="./css/style.css">
+  
+  
+</head>
+<body>
+  
+  <!-- ========  nav section  ============ -->
+
+
+  <nav>
+    <div class="container nav_container">
+      <div class="nav_left">
+        <a href="index.html">
+          <h2>Tours</h2>
+        </a>
+      </div>
+
+      <div class="nav_right">
+        <ul class="nav_menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="tours.html">Tours</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav_search">
+          <input type="text" placeholder="Enter Keyword...">
+
+          <button>
+            <i class="ri-search-line"></i> 
+          </button>
+        </div>
+
+        
+      </div>
+      
+      <!-- =========== hamburger ============ -->
+
+      <button id="open-menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+      <button id="close-menu">
+        <i class="ri-close-line"></i>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- ======== end of nav section  ============ -->
+
+
+
+
+  <!-- ======== Header section  ============ -->
+
+
+  <header class="header">
+    <div class="container header_container ">
+      
+      <div class="header_content">
+        <h2>Travel & Adventure</h2>
+        <h4>Take advantage of this amazing exclusive offer</h4>
+      </div>
+
+      <div class="header_btn">
+        <button class="btn">
+          Explore More
+        </button>
+
+      </div>
+    </div>
+
+    <div class="header_navigation">
+      <div class="left_arrow" id="arrow">
+        <i class="ri-arrow-left-line"></i>
+      </div>
+      <div class="right_arrow" id="arrow">
+        <i class="ri-arrow-right-line"></i>
+      </div>
+        
+    </div>
+
+  </header>
+
+  <!-- ======== end of Header section  ============ -->
+
+
+  <!-- ========  Booking Date section  ============ -->
+
+  <section class="booking_form">
+    <div class="container booking_form-container">
+      <div class="date_form">
+        <h4>Date Form:</h4>
+        <input type="date" id="date" placeholder="mm/yy/dd">
+      </div>
+
+      <div class="destination_form">
+        <h4>Destinations:</h4>
+        <select name="" id="">
+          <option value="">Select Location</option>
+          <option value="Kathmandu">Kathmandu</option>
+          <option value="Pokhara">Pokhara</option>
+          <option value="Chitwan">Chitwan</option>
+          <option value="Bandipur">Bandipur</option>
+        </select>
+      </div>
+
+      <div class="activity_form">
+        <h4>Activities:</h4>
+        <select name="" id="">
+          <option value="">Select Any</option>
+          <option value="Hiking">Hiking</option>
+          <option value="Adventure">Adventure</option>
+          <option value="City Tours">City Tours</option>
+        </select>
+      </div>
+
+      <div class="guests_form">
+        <h4>Guests:</h4>
+        <input type="number" name="" id="number_form" placeholder="0">
+      </div>
+
+      <div class="button_form">
+        <button class="btn">Find Tour</button>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ======== end of Booking Date section  ============ -->
+
+
+
+  
+  
+  <!-- ======== swiper js script cdn   ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  
+  <!-- ========== script js link ========== -->
+   <script src="main.js"></script>
+  
+  
+</body>
+</html>
