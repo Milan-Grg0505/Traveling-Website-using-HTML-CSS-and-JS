@@ -3,15 +3,16 @@
 /* ==============  CSS VARIABLES & BASE SETUP ============== */
 
 :root {
-  --color-dark:#070E2A;
+  --color-dark: #070E2A;
   --color-primary: #0F183A;
   --color-secondary: #336DD5;
+  --color-danger: #C43E48;
   --color-white: #fff;
   --color-accent: #FFA127;
   --color-light: #272F4D;
 
   /* Container widths */
- --max-width-sm: 90%;
+  --max-width-sm: 90%;
   --max-width-md: 85%;
   --max-width-lg: 80%;
   --transition: all 400ms ease;
@@ -37,11 +38,11 @@ body {
   overflow-x: hidden;
 }
 
-section{
+section {
   padding: 6rem 0;
 }
 
-section h2{
+section h2 {
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -139,9 +140,9 @@ nav {
   position: relative;
 }
 
-.window-scroll{
+.window-scroll {
   background: var(--color-primary);
-  box-shadow: 0 3rem 2rem rgba(0,0,0,0.2);
+  box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .nav_right {
@@ -229,13 +230,13 @@ nav {
 
 /* ============= Header section =================== */
 
-.header{
+.header {
   position: relative;
   top: 5rem;
   width: 100%;
   height: calc(100vh - 5rem);
-  background: 
-   linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../images/banner1.jpg') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -246,40 +247,40 @@ nav {
 }
 
 
-.header_container{
+.header_container {
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  padding : 0 3rem;
+  padding: 0 3rem;
   position: relative;
   z-index: 2;
   color: var(--color-white);
 }
 
-.header_content h2{
-  padding-bottom:0.7rem;
+.header_content h2 {
+  padding-bottom: 0.7rem;
   color: var(--color-white);
 }
 
-.header_content h5{
+.header_content h5 {
   font-weight: 500;
   color: var(--color-white);
 }
 
-.left_arrow{
+.left_arrow {
   position: absolute;
   bottom: 5%;
   left: 2%;
 }
 
-.right_arrow{
+.right_arrow {
   position: absolute;
   bottom: 5%;
   right: 2%;
 }
 
-#arrow{
+#arrow {
   background: var(--color-secondary);
   color: var(--color-white);
   padding: 1rem;
@@ -293,12 +294,12 @@ nav {
 
 
 /* ============= Form section =================== */
-.booking_form{
+.booking_form {
   padding: 6rem 2rem;
   margin-top: 4rem;
 }
 
-.booking_form-container{
+.booking_form-container {
   background: var(--color-primary);
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
   padding: 3rem 2rem;
@@ -306,20 +307,32 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  
+  align-items: flex-start;
+  gap: 1.5rem;
+
 }
 
-.booking_form-container > div:nth-child(n) h4 {
+.booking_form-container>div {
+  flex: 1;
+  /* Make all items flexible */
+  min-width: 180px;
+  /* Minimum width for each field */
+  max-width: 220px;
+  /* Maximum width to prevent too wide */
+}
+
+.booking_form-container>div:nth-child(n) h4 {
   color: var(--color-white);
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
-.booking_form-container > div:nth-child(n) input,select{
+.booking_form-container>div:nth-child(n) input,
+select {
   background: var(--color-primary);
-  /* width: 200px; */
+  width: 100%;
   padding: 1rem 1.2rem;
   border-radius: 2rem;
   color: var(--color-white);
@@ -327,15 +340,30 @@ nav {
   font-size: 1rem;
 }
 
-.booking_form-container > div:nth-child(n) input:hover,select:hover{
+.booking_form-container>div:nth-child(n) input:hover,
+select:hover {
   border: 3px solid var(--color-secondary);
 }
+
+/* Button form specific styling */
+.button_form {
+  display: flex;
+  align-items: flex-end;
+  min-width: 150px; /* Fixed width for button */
+}
+
+.button_form .btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
 /* ============= End of booking section =================== */
 
 
 /* ============= About Us section =================== */
 
-.about_us-container{
+.about_us-container {
   display: flex;
   /* flex-basis: 40% 60%; */
   align-items: center;
@@ -346,45 +374,46 @@ nav {
 
 .about_us-container img {
   flex: 1;
-  max-width: 500px; /* limits how large the image can grow */
+  max-width: 500px;
+  /* limits how large the image can grow */
   width: 100%;
   border-radius: 1rem;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 
-.about_us-right{
+.about_us-right {
   padding: 2rem 0;
 }
 
-.about_us-right h2{
+.about_us-right h2 {
   color: var(--color-white);
   text-align: left;
 }
 
-.about_us-right h3{
+.about_us-right h3 {
   color: var(--color-secondary);
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
-.about_us-right p{
+.about_us-right p {
   color: var(--color-white);
   margin-bottom: 2rem;
 }
 
-.about_us-info{
+.about_us-info {
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.about_us-info li{
+.about_us-info li {
   display: flex;
   gap: 0.5rem;
 }
 
-.about_us-info li h5{
+.about_us-info li h5 {
   font-weight: 500;
 }
 
@@ -393,13 +422,13 @@ nav {
 
 
 /* ============= Feataured section =================== */
-.featured h3{
+.featured h3 {
   color: var(--color-secondary);
   text-align: center;
   font-weight: 500;
 }
 
-.featured h2{
+.featured h2 {
   color: var(--color-white);
 }
 
@@ -408,14 +437,14 @@ nav {
 }
 
 
-.featured-box{
+.featured-box {
   /* width: 100%; */
   overflow: hidden;
   border: 1px solid var(--color-light);
   border-radius: 1rem;
 }
 
-.featured-img{
+.featured-img {
   /* width: 100%; */
   height: 250px;
   overflow: hidden;
@@ -424,7 +453,7 @@ nav {
 
 }
 
-.featured-img img{
+.featured-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -436,59 +465,59 @@ nav {
 
 }
 
-.featured-img img:hover{
+.featured-img img:hover {
   transform: scale(1.1);
 }
 
-.featured-details{
+.featured-details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
 }
 
-.featured-stars{
+.featured-stars {
   display: flex;
   gap: 0.5rem;
   align-items: center;
 }
 
-.featured-stars i{
+.featured-stars i {
   color: var(--color-accent);
 }
 
-.featured-stars .rating h5{
+.featured-stars .rating h5 {
   color: var(--color-white);
   font-size: 1rem;
   font-weight: 500;
 }
 
-.featured-details h4{
+.featured-details h4 {
   color: var(--color-white);
 }
 
-.featured-details h5{
+.featured-details h5 {
   color: var(--color-white);
   font-weight: 500;
 }
 
-.featured-details h5 i{
+.featured-details h5 i {
   color: var(--color-secondary);
   margin-right: 0.5rem;
 }
 
-.featured-details .price{
+.featured-details .price {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.featured-details .price p{
+.featured-details .price p {
   color: var(--color-white);
   font-size: 1.2rem;
 }
 
-.featured-details a{
+.featured-details a {
   text-align: end;
   color: var(--color-secondary);
   font-size: 1rem;
@@ -496,40 +525,43 @@ nav {
 
 .swiper-pagination {
   text-align: center;
-  margin-top: 10px;  /* space below the slides */
-  position: relative; 
+  margin-top: 10px;
+  /* space below the slides */
+  position: relative;
   z-index: 10;
 }
+
 /* ============= End of Featured section =================== */
 
 
 
 /* ============= Service section =================== */
-.services h3{
+.services h3 {
   color: var(--color-secondary);
   text-align: center;
 }
 
-.services h2{
+.services h2 {
   color: var(--color-white);
   font-weight: 500;
   margin-top: 0.5rem;
 }
-.services h4{
+
+.services h4 {
   color: var(--color-white);
   font-weight: 500;
   margin-top: 0.5rem;
   text-align: center;
 }
 
-.services-container{
+.services-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-.service-box{
+.service-box {
   border: 1px solid var(--color-dark);
   padding: 3rem 2rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -538,16 +570,16 @@ nav {
   transition: var(--transition);
 }
 
-.service-box:hover{
+.service-box:hover {
   background: var(--color-primary);
 }
 
-.service-logo{
+.service-logo {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.service-logo i{
+.service-logo i {
   background: var(--color-secondary);
   padding: 1rem;
   border-radius: 50%;
@@ -556,7 +588,7 @@ nav {
   text-align: center;
 }
 
-.service-details{
+.service-details {
   margin-top: 1rem;
   color: var(--color-white);
 }
@@ -568,120 +600,121 @@ nav {
 /* ============= Footer section =================== */
 
 
-.footer{
+.footer {
   padding: 5rem 0;
   background: var(--color-dark);
 }
 
-.copyright{
+.copyright {
   text-align: center;
-  color : var(--color-white);
+  color: var(--color-white);
   margin-top: 4rem;
 }
 
-.footer-container{
+.footer-container {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
+
 /* 
 .footer-container div > :nth-child(n) h4{
   color: var(--color-white);
   font-weight: 500;
 } */
 
-.footer-1{
+.footer-1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer-1 h4{
+.footer-1 h4 {
   color: var(--color-white);
   font-weight: 500;
 }
 
-.footer-1 .footer-1-details li{
+.footer-1 .footer-1-details li {
   margin-bottom: 1rem;
   color: var(--color-white);
   font-size: 1rem;
   transition: var(--transition);
 }
 
-.footer-1 .footer-1-details li:hover{
+.footer-1 .footer-1-details li:hover {
   color: var(--color-light);
 }
 
-.footer-1 .footer-socials{
+.footer-1 .footer-socials {
   display: flex;
   gap: 0.5rem;
 }
 
-.footer-1 .footer-socials i{
-   background: var(--color-white);
+.footer-1 .footer-socials i {
+  background: var(--color-white);
   color: var(--color-secondary);
   font-size: 1rem;
   border-radius: 50%;
   padding: 1rem;
 }
 
-.footer-2{
+.footer-2 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer-2 h4{
+.footer-2 h4 {
   font-weight: 500;
   color: var(--color-white);
 }
 
-.footer-2 .footer-menu{
+.footer-2 .footer-menu {
   display: flex;
   gap: 1rem;
   flex-direction: column;
   transition: var(--transition);
 }
 
-.footer-2 .footer-menu li:hover{
+.footer-2 .footer-menu li:hover {
   margin-left: 0.5rem;
 }
 
 
-.footer-3{
+.footer-3 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer-3 h4{
+.footer-3 h4 {
   font-weight: 500;
   color: var(--color-white);
 }
 
-.footer-3 .footer-3-details{
+.footer-3 .footer-3-details {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.footer-3 .footer-3-details li:hover{
-   margin-left: 0.5rem;
+.footer-3 .footer-3-details li:hover {
+  margin-left: 0.5rem;
 }
 
 
-.footer-4{
+.footer-4 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer-4 h4{
+.footer-4 h4 {
   font-weight: 500;
   color: var(--color-white);
 }
 
-.footer-4 input{
+.footer-4 input {
   width: 100%;
   background: var(--color-primary);
   border: 1px solid var(--color-primary);
@@ -695,12 +728,12 @@ nav {
 }
 
 
-.footer-4 button{
+.footer-4 button {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.footer-4 h5{
+.footer-4 h5 {
   font-weight: 500;
   color: var(--color-white);
 }
@@ -732,24 +765,40 @@ nav {
   }
 
   .booking_form-container{
-    padding: 1rem;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
   }
 
+  .booking_form-container > div {
+    min-width: 160px; /* Slightly smaller min-width */
+    max-width: 200px;
+  }
+
+  .booking_form-container > div h4 {
+    font-size: 0.9rem;
+  }
+
+  .booking_form-container > div input,
+  .booking_form-container > div select {
+    padding: 0.9rem 1rem;
+    font-size: 0.9rem;
+  }
 
   /* .featured-box{
     max-width: 38%;
   } */
 
   .swiper-pagination {
-  margin-top: 50px;  /* space below the slides */
+    margin-top: 50px;
+    /* space below the slides */
   }
 
-  .footer-container{
+  .footer-container {
     gap: 1rem;
   }
 
-  .footer-1 .footer-socials{
-   gap: 0.3rem;
+  .footer-1 .footer-socials {
+    gap: 0.3rem;
   }
 
 }
@@ -782,17 +831,17 @@ nav {
     max-width: var(--max-width-md);
   } */
 
-  nav{
+  nav {
     background: var(--color-primary);
   }
-  
+
   .nav_container {
     padding: 0 2rem;
     position: relative;
-    
+
   }
-  
-    /* Hide menu & search by default */
+
+  /* Hide menu & search by default */
   .nav_right {
     position: absolute;
     top: 3rem;
@@ -807,7 +856,7 @@ nav {
     transition: var(--transition);
   }
 
-   /* Show menu only when active */
+  /* Show menu only when active */
   .nav_right.active {
     display: flex;
   }
@@ -827,7 +876,7 @@ nav {
 
   /* Hide search bar completely on mobile */
   .nav_search {
-    display: none; 
+    display: none;
     width: 100%;
     margin-top: 1rem;
   }
@@ -836,7 +885,7 @@ nav {
     display: flex;
 
   }
- 
+
   #open-menu,
   #close-menu {
     display: inline-block;
@@ -847,43 +896,59 @@ nav {
   }
 
 
-  .booking_form-container{
-   flex-wrap: wrap;
-   gap: 2rem;
-   padding: 2rem 1rem;
-   justify-content: center;
-    
+   .booking_form-container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+  }
+
+  .booking_form-container > div {
+    flex: 0 1 calc(50% - 1rem); /* 2 columns layout */
+    min-width: 140px;
+    max-width: none; /* Remove max-width restriction */
+  }
+
+  .button_form {
+    flex: 0 1 100%; /* Button takes full width */
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .button_form .btn {
+    width: auto; /* Auto width for button */
+    min-width: 200px;
   }
 
 
-  .about_us-container{
+  .about_us-container {
     flex-direction: column;
     align-items: center;
-    
+
   }
 
   .about_us-container img {
-  max-width: 90%;
-  margin: 0 auto;
-}
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
-  .about_us-right{
+  .about_us-right {
     padding: 0 1.5rem;
   }
 
 
-  .services-container{
+  .services-container {
     grid-template-columns: 1fr 1fr;
     gap: 1.2rem;
   }
- 
 
-  .footer-container{
+
+  .footer-container {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
- 
+
 
 }
 
@@ -892,7 +957,7 @@ nav {
   )=================== */
 @media screen and (max-width:600px) {
 
-  section{
+  section {
     padding: 4rem 0;
   }
 
@@ -916,79 +981,80 @@ nav {
     max-width: var(--max-width-sm);
   }
 
-  nav{
+  nav {
     width: 100%;
   }
-  
+
   .nav_container {
     padding: 0 1rem;
-    
+
   }
+
   .nav_right {
     padding: 1.2rem 1.4rem;
-   
+
   }
 
 
-  .booking_form-container{
+  .booking_form-container {
     flex-direction: column;
     gap: 1.5rem;
     /* padding: 1.5rem; */
   }
 
 
-  
-  .booking_form-container > div {
-    width: 100%; 
+
+  .booking_form-container>div {
+    width: 100%;
   }
 
-  .booking_form-container > div input,
-  .booking_form-container > div select {
-    width: 100%; 
+  .booking_form-container>div input,
+  .booking_form-container>div select {
+    width: 100%;
 
   }
 
-  .booking_form-container .button_form{
+  .booking_form-container .button_form {
     text-align: center;
   }
 
-  
 
-  .about_us-container{
+
+  .about_us-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
- .about_us-container img{
-  margin: 0 1rem;
- }
+  .about_us-container img {
+    margin: 0 1rem;
+  }
 
-  .about_us-right{
+  .about_us-right {
     padding: 1.5rem;
   }
 
-   /* .featured-box {
+  /* .featured-box {
     max-width: 100%;
   } */
 
-   .services-container{
+  .services-container {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .footer{
+  .footer {
     padding: 3rem 0;
   }
 
-   .footer-container{
+  .footer-container {
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
   }
 
-  .footer-1 .footer-socials{
-   justify-content: center;
+  .footer-1 .footer-socials {
+    justify-content: center;
   }
 
 }
