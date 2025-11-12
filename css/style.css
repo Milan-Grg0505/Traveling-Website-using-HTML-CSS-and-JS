@@ -11,9 +11,9 @@
   --color-light: #272F4D;
 
   /* Container widths */
-  --max-width-sm: 600px;
-  --max-width-md: 900px;
-  --max-width-lg: 1200px;
+ --max-width-sm: 90%;
+  --max-width-md: 85%;
+  --max-width-lg: 80%;
   --transition: all 400ms ease;
 }
 
@@ -34,6 +34,7 @@ body {
   color: var(--color-text);
   background: var(--color-primary);
   list-style: 1.6;
+  overflow-x: hidden;
 }
 
 section{

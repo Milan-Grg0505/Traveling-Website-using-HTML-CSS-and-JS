@@ -1,0 +1,357 @@
+.breadcrumb {
+  margin-top: 5rem;
+  height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/inner-banner.jpg') no-repeat center center;
+}
+
+.inner-banner {
+  padding: 4rem 0 0;
+}
+
+.inner-banner h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.inner-banner ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: var(--transition);
+}
+
+.inner-banner ul li {
+  font-size: 1rem;
+}
+
+
+.inner-banner ul li:hover {
+  color: var(--color-secondary);
+}
+
+.inner-banner ul i {
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+/* ============== about section ==================== */
+
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+  align-items: center;
+}
+
+.about-left {
+  width: 100%;
+  height: 100%;
+}
+
+.about-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 1rem;
+}
+
+.about-right {
+  padding: 2rem 0;
+}
+
+.about-right h3 {
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about-right h2 {
+  color: var(--color-white);
+  text-align: left;
+}
+
+.about-right p {
+  margin-bottom: 2rem;
+  color: var(--color-white);
+}
+
+/* ============== end of about section ==================== */
+
+/* <!-- ===============  Team Section ==================== --> */
+.team {
+  background: var(--color-dark);
+}
+
+.team h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.team h2 {
+  color: var(--color-white);
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.team-box {
+  background: var(--color-dark);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.team-box:hover {
+  background: var(--color-primary);
+
+}
+
+.team-image {
+  width: 100%;
+  overflow: hidden;
+
+}
+
+.team-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.team-details {
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-details h4 {
+  color: var(--color-white);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.team-details h4:hover {
+  color: var(--color-secondary);
+}
+
+.team-details .team-socials {
+  display: flex;
+  gap: 0.7rem;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.team-details .team-socials i {
+  background: var(--color-secondary);
+  padding: 0.7rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: var(--color-white);
+
+}
+
+
+/* <!-- ===============  End of Team Section ==================== --> */
+
+
+/* <!-- ===============  Testimonials Section ==================== --> */
+
+.testimonials {
+  overflow-x: hidden;
+  /* width: 100%; */
+  position: relative;
+  box-shadow: inset 0 2rem 2rem rgba(0, 0, 0, 0.3);
+  padding: 6rem 0;
+}
+
+.testimonials h3 {
+  text-align: center;
+  color: var(--color-secondary);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.testimonials h2 {
+  color: var(--color-white);
+}
+
+.testimonials-container {
+  display: flex;
+  align-items: stretch;
+}
+
+
+.testimonials .swiper-slide {
+  padding: 10px;
+  height: auto;
+}
+
+.testimonials-top {
+  background: var(--color-dark);
+  border: 1px solid var(--color-light);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  color: var(--color-white);
+  /* max-height: 200px;
+  height: 100%; */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.testimonials-top .testimonials-title {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.testimonials-top .testimonials-title i {
+  color: var(--color-secondary);
+  font-size: 2rem;
+}
+
+.testimonials-top .testimonials-title h4 {
+  font-weight: 500;
+}
+
+.testimonials-top .testimonials-description p {
+  font-size: 1rem;
+  color: #999;
+}
+
+.testimonials-bottom {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.testimonials-bottom img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.testimonials-bottom .testimonials-customers h4 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.testimonials-bottom .testimonials-customers h5 {
+  color: #999;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+/* <!-- ===============  End of Testimonials Section ==================== --> */
+
+
+
+
+
+
+
+/* ============= MEDIA QUERIES (TABLETS
+)=================== */
+
+@media screen and (max-width:1200px) {
+
+
+  .inner-banner {
+    padding: 2rem;
+  }
+
+  .about-container {
+    gap: 4rem;
+  }
+
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-top .testimonials-title h4 {
+    font-size: 1.2rem;
+  }
+
+  .testimonials-top {
+    padding: 1rem;
+  }
+
+
+
+}
+
+
+/* ============= MEDIA QUERIES (MOBLIES
+)=================== */
+@media screen and (max-width:900px) {
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-left img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .about-right {
+    padding: 0 1rem;
+  }
+
+  .about-right h2 {
+    text-align: center;
+  }
+
+
+  .testimonials-top .testimonials-title h4 {
+    font-size: 1rem;
+  }
+
+  .testimonials-top .testimonials-description p {
+    font-size: 0.8rem;
+
+  }
+
+
+}
+
+
+
+/* /* ============= MEDIA QUERIES (MOBLIES */
+@media screen and (max-width:600px) {
+  .about-container {
+    gap: 2rem;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-right {
+    padding: 0 1rem;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+}
